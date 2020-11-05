@@ -1,0 +1,31 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ClassCastException;
+
+/**
+ *
+ * @author DELL-PC
+ */
+public class Test {
+    static void dowork1()
+    {
+        String s=new String("Ashvin");
+        Object o=(Object)s;
+        System.out.println("Executed Succesfully");
+        
+    }
+    static void dowork2()
+    {
+        Object o=new Object();
+        String s=(String)o;    // It will raise class cast exception as we are casting to child type
+        
+    }
+    public static void main(String args[])
+    {
+        dowork1();
+        dowork2();
+    }
+}
